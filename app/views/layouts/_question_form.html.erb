@@ -1,5 +1,7 @@
 <h1>Fill out survey</h1>
 
+<%= render "layouts/errors", :object => @survey %>
+
 <%= form_for [@survey, @question] do |f| %>
   <%= f.label :question %>
   <%= f.text_field :question %>

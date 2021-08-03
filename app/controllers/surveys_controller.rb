@@ -44,6 +44,14 @@ class SurveysController < ApplicationController
     redirect_to surveys_path
   end
 
+  def answers
+    @survey = Survey.find(params[:id])
+    render :answer
+  end
+
+  def update_answers
+  end
+
   private
   def survey_params
     params.require(:survey).permit(:name, :topic)
