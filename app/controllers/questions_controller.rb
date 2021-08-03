@@ -41,6 +41,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @question.destroy
     redirect_to survey_path(@question.survey)
+  end
 
   private
     def question_params

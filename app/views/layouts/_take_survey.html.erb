@@ -1,11 +1,15 @@
 <%= render "layouts/errors", :object => @survey %>
 
 <form action="TBD" method="tbd">
-  <div class="form-control">
     <% @survey.questions.each do |question| %>
-      <label id="<%= question.id %>"><%= question.name %></label>
-      <input id="q" name="<%= question.id %>" id="<%= question.id %>">
+    <div class="row">
+      <div class="col">
+        <label id="<%= question.id %>"><%= question.question %></label>
+      </div>
+      <div class="col">
+        <input id="q" name="<%= question.id %>" id="<%= question.id %>">
+      </div>
+    </div>
     <% end %>
-    <button type="submit" class="btn btn-primary">submit dates</button>
-  </div>
+  <button type="submit" class="btn btn-primary">submit dates</button>
 </form>
