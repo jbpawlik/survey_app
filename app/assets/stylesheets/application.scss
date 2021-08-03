@@ -35,3 +35,22 @@ body {
 #userType {
   text-align: center;
 }
+#surveyAdmin {
+  text-align: left;
+  border: 2px solid rgb(34, 98, 172);
+  padding: .25em;
+  background: linear-gradient(144deg, rgb(80, 152, 190), pink);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position-y: bottom;
+  margin-right: 5em;
+}
+#surveyTaker {
+  text-align: right;
+  border: 2px solid rgb(34, 98, 172);
+  padding: .25em;
+  background: linear-gradient(144deg, rgb(80, 152, 190), pink);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position-y: bottom;
+}

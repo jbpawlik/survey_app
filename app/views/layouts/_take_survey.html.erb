@@ -1,30 +1,17 @@
 <%= render "layouts/errors", :object => @survey %>
 
-<form action="/surveys/<%= @survey.id %>/answers" method="get">
-  <div class="container">
-    <% @survey.questions.each do |question| %>
-    <div class="row">
-        <label id="<%= question.id %>"><%= question.question %></label>
-        <input id="q" name="<%= question.id %>" id="<%= question.id %>" type="text">
-    </div>
-    <% end %>
-  <button type="submit" class="btn btn-primary">Submit Answers</button>
-  </div>
-</form>
-
-<%# Question class
-{answer => [A, B, C, D]}
-{saved_answer => [filled out, when participant, answers]}
-But where we saving the answer? %>
-
-<h1>Display Radio Buttons</h1>
-
 <form action="/location location location">
-  <p>Please select your favorite Web language:</p>
-  <input type="radio" id="html" name="fav_language" value="HTML">
-  <label for="html">HTML</label><br>
-  <input type="radio" id="css" name="fav_language" value="CSS">
-  <label for="css">CSS</label><br>
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-  <label for="javascript">JavaScript</label>
+  <% @survey.questions.each do |question| %>
+  <% choice_array = question.answer.split(".")%>
+  <p><%= question.question %></p>
+    <input type="radio" name="<%= question.id %>" id="<%= question.id %>" value="<%= choice_array[0] %>">
+    <label for="<%= question.id %>"><%= choice_array[0] %></label><br>
+    <input type="radio" name="<%= question.id %>" id="<%= question.id %>" value="<%= choice_array[1] %>">
+    <label for="<%= question.id %>"><%= choice_array[1] %></label><br>
+    <input type="radio" name="<%= question.id %>" id="<%= question.id %>" value="<%= choice_array[2] %>">
+    <label for="<%= question.id %>"><%= choice_array[2] %></label><br>
+    <input type="radio" name="<%= question.id %>" id="<%= question.id %>" value="<%= choice_array[3] %>">
+    <label for="<%= question.id %>"><%= choice_array[3] %></label><br>
+  <% end %>
+  <button type="submit" class="btn btn-primary">Submit Answers</button>
 </form>

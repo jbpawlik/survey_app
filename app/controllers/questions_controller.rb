@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
   def create
     @survey = Survey.find(params[:survey_id])
     string_thing = ""
-    string_thing = string_thing.join("A: ", params[:answer], "B: ", params[:answer2], "C: ", params[:answer3], "D: ", params[:answer4])
+    string_thing = string_thing.concat("A: ", params[:answer1], ". B: ", params[:answer2], ". C: ", params[:answer3], ". D: ", params[:answer4])
     these_params = {:question => params[:question], :answer => string_thing}
     @question = @survey.questions.new(these_params)
     if @question.save
