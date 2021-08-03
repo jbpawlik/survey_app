@@ -27,6 +27,7 @@ class SurveysController < ApplicationController
 
   def show
     @survey = Survey.find(params[:id])
+    @questions = @survey.questions
     render :show
   end
 

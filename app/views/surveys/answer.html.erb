@@ -3,3 +3,5 @@
 <% @questions.each do |question| %>
   <p><%= question.question%>: <%= question.answer %></p>
 <% end %>
+
+<p><%= link_to "Return to surveys", surveys_path %></p>
