@@ -1,6 +1,18 @@
-<h1>Survey's Survey's Survey's</h1>
+<div id="header">
+  <h1>Surveys, Surveys, Surveys!</h1>
+  <h2>Luxury Surveys at Discount Prices</h2>
+</div>
+<br>
+<h4>Are you a:</h4>
+  <div class="row">
+    <div class="col-4">
+      <h4><span id="surveyAdmin">Survey Administrator</span></h4>
+    </div>
+    <div class="col-4">
+      <h4>Survey Taker</h4>
+    </div>
+  </div>
 
-<h4>Good survey's at discount prices</h4>
 
 <% if @surveys.any? %>
   <ul>
@@ -13,3 +25,18 @@
 <% end %>
 
 <p><%= link_to "Make a Survey", new_survey_path %></p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>

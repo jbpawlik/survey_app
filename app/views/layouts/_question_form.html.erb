@@ -2,8 +2,45 @@
 
 <%= render "layouts/errors", :object => @question %>
 
-<%= form_for [@survey, @question] do |f| %>
-  <%= f.label :question %>
-  <%= f.text_field :question %>
-  <p><%= f.submit %></p>
-<% end %>
+<form action="/surveys/<%= @survey.id %>/questions" method="post">
+  <div class="container">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <div class="row">
+      <div class="col">
+        <label id="q">Question</label>
+        <input id="q" name="question" type="text">
+      </div>
+      <div class="col">
+        <label id="a">Answer1</label>
+        <input id="a" name="answer1" type="text">
+      </div>
+      <div class="col">
+        <label id="a">Answer2</label>
+        <input id="a" name="answer2" type="text">
+      </div>
+      <div class="col">
+        <label id="a">Answer3</label>
+        <input id="a" name="answer3" type="text">
+      </div>
+      <div class="col">
+        <label id="a">Answer4</label>
+        <input id="a" name="answer4" type="text">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Question</button>
+    </div>
+  </div>
+</form>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>

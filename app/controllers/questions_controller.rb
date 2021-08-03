@@ -7,7 +7,8 @@ class QuestionsController < ApplicationController
 
   def create
     @survey = Survey.find(params[:survey_id])
-    @question = @survey.questions.new(question_params)
+    these_params = {:question => params[:question], :answer => [params[:answer], params[:answer2], params[:answer3], params[:answer4]]}
+    @question = @survey.questions.new(these_params)
     if @question.save
       flash[:notice] = "Question successfully added!"
       redirect_to survey_path(@survey)
