@@ -1,6 +1,6 @@
 <h1>Fill out survey</h1>
 
-<%= render "layouts/errors", :object => @survey %>
+<%= render "layouts/errors", :object => @question %>
 
 <%= form_for [@survey, @question] do |f| %>
   <%= f.label :question %>

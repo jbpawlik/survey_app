@@ -5,9 +5,9 @@
     <% @survey.questions.each do |question| %>
     <div class="row">
         <label id="<%= question.id %>"><%= question.question %></label>
-        <input id="q" name="<%= question.id %>" id="<%= question.id %>">
+        <input id="q" name="<%= question.id %>" id="<%= question.id %>" required>
     </div>
     <% end %>
-  <button type="submit" class="btn btn-primary">Submit Dates</button>
+  <button type="submit" class="btn btn-primary">Submit Answers</button>
   </div>
 </form>
