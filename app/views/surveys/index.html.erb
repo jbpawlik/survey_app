@@ -1,0 +1,15 @@
+<h1>Survey's Survey's Survey's</h1>
+
+<h4>Good survey's at discount prices</h4>
+
+<% if @surveys.any? %>
+  <ul>
+    <% @surveys.each do |survey| %>
+      <li><%= link_to survey.name, survey_path(survey) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No surveys have been created yet!</p>
+<% end %>
+
+<p><%= link_to "Make a Survey", new_survey_path %></p>

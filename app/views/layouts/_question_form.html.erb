@@ -1,0 +1,7 @@
+<h1>Fill out survey</h1>
+
+<%= form_for [@survey, @question] do |f| %>
+  <%= f.label :question %>
+  <%= f.text_field :question %>
+  <p><%= f.submit %></p>
+<% end %>
