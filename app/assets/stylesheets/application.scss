@@ -12,17 +12,26 @@
  *
 
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
 
- body {
-   background: linear-gradient(144deg, rgb(112, 192, 235), pink);
-   background-size:cover;
-   background-repeat:no-repeat;
-   background-position-y: bottom;
-   min-height: 100vh;
-   padding: 5em;
- }
+body {
+  background: linear-gradient(144deg, rgb(112, 192, 235), pink);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position-y: bottom;
+  min-height: 100vh;
+  padding: 5em;
+}
 #header {
+  text-align: center;
+  border: 10px double rgb(34, 98, 172);
+  padding: 1em;
+  background: linear-gradient(144deg, rgb(80, 152, 190), pink);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position-y: bottom;
+}
+#userType {
   text-align: center;
 }

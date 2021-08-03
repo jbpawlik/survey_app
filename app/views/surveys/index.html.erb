@@ -3,16 +3,11 @@
   <h2>Luxury Surveys at Discount Prices</h2>
 </div>
 <br>
-<h4>Are you a:</h4>
-  <div class="row">
-    <div class="col-4">
-      <h4><span id="surveyAdmin">Survey Administrator</span></h4>
-    </div>
-    <div class="col-4">
-      <h4>Survey Taker</h4>
-    </div>
-  </div>
-
+<div id="userType">
+  <h2>Are you a:</h2>
+  <h2><span id="surveyAdmin">Survey Administrator</span></h2>
+  <h2><span id="surveyTaker">Survey Taker</span></h2>
+</div>
 
 <% if @surveys.any? %>
   <ul>
