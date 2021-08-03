@@ -1,6 +1,6 @@
 <%= render "layouts/errors", :object => @survey %>
 
-<form action="/survey/" method="tbd">
+<form action="/surveys/<%= @survey.id %>/answers" method="get">
   <div class="container">
     <% @survey.questions.each do |question| %>
     <div class="row">

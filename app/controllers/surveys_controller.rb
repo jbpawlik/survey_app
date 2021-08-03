@@ -46,10 +46,16 @@ class SurveysController < ApplicationController
 
   def answers
     @survey = Survey.find(params[:id])
+    @questions = @survey.questions
+    @questions.each do |question|
+      question.update({:answer => params[question.id.to_s]})
+      question.save
+    end
     render :answer
   end
 
-  def update_answers
+  def answers_update
+    redirect_to answers_path
   end
 
   private

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :surveys do
     member do
       get 'answers'
-      patch 'answers'
+      post 'answers_update'
     end
     resources :questions
   end
